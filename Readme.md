@@ -1,9 +1,7 @@
 
-__I don't use this anymore, it's unsupported, use https://github.com/mozilla-neutrino/neutrino-dev__.
-
 # Frontend Boilerplate
 
-A boilerplate of things that mostly shouldn't exist.
+Heavily inspired on https://github.com/tj/frontend-boilerplate
 
 ## Contains
 
@@ -11,36 +9,34 @@ A boilerplate of things that mostly shouldn't exist.
 - [x] [React](https://facebook.github.io/react/)
 - [x] [Redux](https://github.com/reactjs/redux)
 - [x] [Babel](https://babeljs.io/)
-- [x] [Autoprefixer](https://github.com/postcss/autoprefixer)
-- [x] [PostCSS](https://github.com/postcss/postcss)
 - [x] [CSS modules](https://github.com/outpunk/postcss-modules)
-- [x] [Rucksack](http://simplaio.github.io/rucksack/docs)
 - [x] [React Router Redux](https://github.com/reactjs/react-router-redux)
 - [x] [Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
-- [ ] Redux effects
-- [x] TodoMVC example
+- [x] [Redux Saga](https://github.com/redux-saga/redux-saga)
+- [x] [Open Weather API Example](https://openweathermap.org/current)
+- [x] [Material UI](http://www.material-ui.com/)
 
 ## Setup
 
 ```
-$ npm install
+$ yarn install
 ```
 
 ## Running
 
 ```
-$ npm start
+$ yarn start
 ```
 
 ## Build
 
 ```
-$ npm run build
+$ yarn run build
 ```
 
 ## Note
 
-My personal projects have diverged from this quite a bit, I use browserify now instead etc, but feel free to use this if it fits your needs! I won't be updating it a ton for now unless I have time to update it to match my current workflow.
+Enjoy!
 
 # License
 
