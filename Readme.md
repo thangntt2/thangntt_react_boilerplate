@@ -36,7 +36,7 @@ $ yarn run build
 
 ## Note
 
-Enjoy!
+Enjoy! If you like it, please star it :D
 
 # License
 
