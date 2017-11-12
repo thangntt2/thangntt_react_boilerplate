@@ -3,7 +3,7 @@ import { takeLatest } from 'redux-saga'
 import { ActionTypes, weather } from '../actions'
 import { WeatherAPI } from '../apis'
 
-function* doFetchWeather(action) {
+function * doFetchWeather (action) {
   const { payload: cityName } = action
   const { response, error } = yield call(WeatherAPI.fetchWeather, cityName.cityName)
   if (!error) {
@@ -13,12 +13,12 @@ function* doFetchWeather(action) {
   }
 }
 
-function* watchFetchWeather() {
+function * watchFetchWeather () {
   yield takeLatest(ActionTypes.WEATHER.REQUEST, doFetchWeather)
 }
 
-export default function* root() {
+export default function * root () {
   yield [
-    fork(watchFetchWeather),
+    fork(watchFetchWeather)
   ]
 }

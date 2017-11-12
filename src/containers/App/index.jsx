@@ -9,8 +9,6 @@ import styles from './style'
 class App extends Component {
   constructor(props) {
     super(props)
-    this.handleChangeText = this.handleChangeText.bind(this)
-    this.handleKeypress = this.handleKeypress.bind(this)
 
     this.state = {
       value: '',

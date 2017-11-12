@@ -4,7 +4,7 @@ import { routerMiddleware } from 'react-router-redux'
 import { browserHistory } from 'react-router'
 import rootReducer from '../reducers'
 
-export default function configureStore(initialState) {
+export default function configureStore (initialState) {
   const sagaMiddleware = createSagaMiddleware()
   const router = routerMiddleware(browserHistory)
 
@@ -13,8 +13,8 @@ export default function configureStore(initialState) {
     initialState,
     applyMiddleware(
       sagaMiddleware,
-      router,
-    ),
+      router
+    )
   )
 
   store.runSaga = sagaMiddleware.run

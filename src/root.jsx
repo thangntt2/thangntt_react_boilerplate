@@ -10,8 +10,7 @@ export const Root = (props) => {
     <Provider store={store}>
       <Router history={history}>
         <MuiThemeProvider>
-          <Route path="/" component={App}>
-          </Route>
+          <Route path='/' component={App} />
         </MuiThemeProvider>
       </Router>
     </Provider>

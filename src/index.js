@@ -5,10 +5,9 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 import ReactDOM from 'react-dom'
 import React from 'react'
 import { getStoredState, createPersistor } from 'redux-persist'
-import { AppContainer } from 'react-hot-loader'
 import rootSaga from './sagas'
 
-import Root from './root'
+import RootComponent from './root'
 import configureStore from './store/configureStore'
 
 const persistConfig = { /**
@@ -33,21 +32,8 @@ getStoredState(persistConfig, (err, restoredState) => {
   //   }
   // }
   injectTapEventPlugin()
-  const render = (RootComponent) => {
-    ReactDOM.render(
-      <AppContainer>
-        <RootComponent store={store} history={history} />
-      </AppContainer>,
-      document.getElementById('root')
-    )
-  }
-
-  render(Root)
-  if (module.hot) {
-    module.hot.accept('./root', () => {
-      const NewRoot = require('./root').default
-
-      render(NewRoot)
-    })
-  }
+  ReactDOM.render(
+    <RootComponent store={store} history={history} />,
+    document.getElementById('root')
+  )
 })

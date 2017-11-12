@@ -6,7 +6,7 @@ import { browserHistory } from 'react-router'
 import DevTools from '../containers/DevTools'
 import rootReducer from '../reducers'
 
-export default function configureStore(initialState) {
+export default function configureStore (initialState) {
   const sagaMiddleware = createSagaMiddleware()
   const router = routerMiddleware(browserHistory)
 
@@ -17,10 +17,10 @@ export default function configureStore(initialState) {
       applyMiddleware(
         sagaMiddleware,
         createLogger(),
-        router,
+        router
       ),
       window.devToolsExtension ? window.devToolsExtension() : DevTools.instrument()
-    ),
+    )
   )
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers

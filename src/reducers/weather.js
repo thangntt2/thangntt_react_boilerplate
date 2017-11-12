@@ -5,7 +5,7 @@ export default (state = {}, action) => {
     const { payload: { response } } = action
     return {
       ...state,
-      data: response,
+      data: response
     }
   }
   return state
