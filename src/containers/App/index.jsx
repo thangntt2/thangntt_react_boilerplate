@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div style={styles.container}>
-          <label>React js boilerplate, demo with Open weather API</label><br />
+          <text>React js boilerplate, demo with Open weather API</text><br />
           <TextField
             floatingLabelText="Enter your city name"
             hintText="Hanoi"
@@ -42,7 +42,7 @@ class App extends Component {
             onKeyPress={this.handleKeypress}
           />
           { weather && weather.data &&
-            <label>Current temp = {weather.data.main.temp} C</label>
+            <text>Current temp = {weather.data.main.temp} C</text>
           }
         </div>
       </MuiThemeProvider>

@@ -5,5 +5,5 @@ import weather from './weather'
 
 export default combineReducers({
   routing,
-  weather
+  weather,
 })

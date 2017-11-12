@@ -6,7 +6,7 @@ import { browserHistory } from 'react-router'
 import DevTools from '../containers/DevTools'
 import rootReducer from '../reducers'
 
-export default function configureStore (initialState) {
+export default function configureStore(initialState) {
   const sagaMiddleware = createSagaMiddleware()
   const router = routerMiddleware(browserHistory)
 
