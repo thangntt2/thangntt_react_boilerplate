@@ -34,6 +34,6 @@ getStoredState(persistConfig, (err, restoredState) => {
   injectTapEventPlugin()
   ReactDOM.render(
     <RootComponent store={store} history={history} />,
-    document.getElementById('root')
+    document.getElementById('root'),
   )
 })

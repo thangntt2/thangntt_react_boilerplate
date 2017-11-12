@@ -122,7 +122,26 @@
       "react/prop-types": [1],
       "react/jsx-uses-react": "error",
       "react/jsx-uses-vars": "error",
-      "react/forbid-prop-types": 0
+      "react/forbid-prop-types": 0,
+      "react/jsx-filename-extension": 0
+    },
+    "plugins": [
+      "react"
+    ],
+    "globals": {
+      "__CLIENT__": true,
+      "__SERVER__": true,
+      "__PRODUCTION__": true,
+      "__DEV__": true,
+      "document": false,
+      "escape": false,
+      "navigator": false,
+      "unescape": false,
+      "window": false,
+      "describe": true,
+      "before": true,
+      "after": true,
+      "it": true
     }
   }
 }
