@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { createStore, applyMiddleware, compose } from 'redux'
 import createLogger from 'redux-logger'
 import createSagaMiddleware, { END } from 'redux-saga'
@@ -17,10 +18,10 @@ export default function configureStore(initialState) {
       applyMiddleware(
         sagaMiddleware,
         createLogger(),
-        router
+        router,
       ),
-      window.devToolsExtension ? window.devToolsExtension() : DevTools.instrument()
-    )
+      window.devToolsExtension ? window.devToolsExtension() : DevTools.instrument(),
+    ),
   )
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers

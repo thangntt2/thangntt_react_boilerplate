@@ -1,11 +1,11 @@
 import { put, call, fork } from 'redux-saga/effects'
 import { takeLatest } from 'redux-saga'
 import { ActionTypes, weather } from '../actions'
-import { WeatherAPI } from '../apis'
+import API from '../apis'
 
-function * doFetchWeather (action) {
+function* doFetchWeather(action) {
   const { payload: cityName } = action
-  const { response, error } = yield call(WeatherAPI.fetchWeather, cityName.cityName)
+  const { response, error } = yield call(API.WeatherAPI.fetchWeather, cityName.cityName)
   if (!error) {
     yield put(weather.success(response, `success fetch weather of ${cityName}`))
   } else {
@@ -13,12 +13,12 @@ function * doFetchWeather (action) {
   }
 }
 
-function * watchFetchWeather () {
+function* watchFetchWeather() {
   yield takeLatest(ActionTypes.WEATHER.REQUEST, doFetchWeather)
 }
 
-export default function * root () {
+export default function* root() {
   yield [
-    fork(watchFetchWeather)
+    fork(watchFetchWeather),
   ]
 }
